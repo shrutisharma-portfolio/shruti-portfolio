@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shruti Sharma — Competitive Intelligence &amp; Market Research</title>
+<meta name="description" content="Competitive Intelligence & Market Research portfolio — Healthcare & Life Sciences, Procurement Strategy. Featuring an independent competitive-landscape analysis of the insulin-pen market.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Shruti Sharma — Competitive Intelligence & Market Research">
+<meta property="og:description" content="Healthcare & Life Sciences portfolio featuring an independent competitive-landscape brief on the insulin-pen market — positioning, cost architecture, and market outlook.">
+<meta property="og:image" content="https://shrutisharma-portfolio.github.io/shruti-portfolio/og-image.png">
+<meta property="og:url" content="https://shrutisharma-portfolio.github.io/shruti-portfolio/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Shruti Sharma — Competitive Intelligence & Market Research">
+<meta name="twitter:description" content="Healthcare & Life Sciences portfolio featuring an independent competitive-landscape brief on the insulin-pen market.">
+<meta name="twitter:image" content="https://shrutisharma-portfolio.github.io/shruti-portfolio/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F3F5F1;
+    --paper-raised:#FFFFFF;
+    --ink:#10262A;
+    --ink-soft:#3C4F4F;
+    --ledger:#0B6E7C;
+    --ledger-deep:#08525D;
+    --flag:#B5650A;
+    --sage:#6B8F86;
+    --line:#D8DFDA;
+    --max:920px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'IBM Plex Sans',sans-serif;
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{
+    font-family:'Source Serif 4',serif;
+    font-weight:700;
+    margin:0;
+    color:var(--ink);
+  }
+  a{color:var(--ledger);}
+  .mono{font-family:'IBM Plex Mono',monospace;}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 28px;}
+  :focus-visible{outline:2px solid var(--flag);outline-offset:3px;}
+
+  nav{
+    position:sticky;top:0;z-index:50;
+    background:rgba(243,245,241,0.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  nav .wrap{
+    display:flex;align-items:center;justify-content:space-between;
+    height:56px;
+  }
+  nav .brand{font-family:'Source Serif 4',serif;font-weight:700;font-size:1.05rem;color:var(--ink);text-decoration:none;}
+  nav ul{list-style:none;display:flex;gap:22px;margin:0;padding:0;}
+  nav ul a{
+    text-decoration:none;color:var(--ink-soft);font-size:0.85rem;
+    font-family:'IBM Plex Mono',monospace;letter-spacing:0.02em;
+  }
+  nav ul a:hover{color:var(--ledger);}
+  .nav-toggle{display:none;background:none;border:none;font-size:1.4rem;color:var(--ink);cursor:pointer;}
+
+  header.hero{padding:64px 0 40px;}
+  .eyebrow{
+    font-family:'IBM Plex Mono',monospace;font-size:0.72rem;letter-spacing:0.14em;
+    color:var(--flag);text-transform:uppercase;margin-bottom:14px;display:block;
+  }
+  .hero h1{font-size:clamp(2.3rem,5vw,3.4rem);line-height:1.05;letter-spacing:-0.01em;}
+  .hero .role{
+    font-size:1.05rem;color:var(--ink-soft);max-width:560px;margin-top:14px;
+  }
+  .hero-actions{display:flex;gap:12px;margin-top:26px;flex-wrap:wrap;}
+  .btn{
+    font-family:'IBM Plex Mono',monospace;font-size:0.82rem;
+    padding:10px 18px;border-radius:2px;text-decoration:none;
+    border:1px solid var(--ink);color:var(--ink);
+    transition:background 0.15s ease, color 0.15s ease;
+    display:inline-block;
+  }
+  .btn.primary{background:var(--ledger);border-color:var(--ledger);color:#fff;}
+  .btn.primary:hover{background:var(--ledger-deep);}
+  .btn:not(.primary):hover{background:var(--ink);color:var(--paper);}
+
+  .exhibit{
+    margin-top:52px;background:var(--paper-raised);
+    border:1px solid var(--line);border-radius:4px;
+    padding:26px 26px 18px;
+  }
+  .exhibit-head{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px;margin-bottom:6px;}
+  .exhibit-tag{font-family:'IBM Plex Mono',monospace;font-size:0.75rem;color:var(--flag);letter-spacing:0.06em;}
+  .exhibit-title{font-family:'Source Serif 4',serif;font-weight:600;font-size:1.05rem;color:var(--ink);}
+  .exhibit-sub{font-family:'IBM Plex Mono',monospace;font-size:0.72rem;color:var(--sage);margin-bottom:14px;}
+  .chart-row{display:flex;gap:24px;flex-wrap:wrap;align-items:flex-start;}
+  .chart-svg-wrap{flex:1 1 340px;min-width:280px;}
+  svg#quadrant{width:100%;height:auto;overflow:visible;}
+  .qdot{cursor:pointer;transition:r 0.15s ease;}
+  .qdot:hover, .qdot.active{r:9;}
+  .qlabel{font-family:'IBM Plex Sans',sans-serif;font-size:11px;font-weight:600;fill:var(--ink);}
+  .axis-label{font-family:'IBM Plex Mono',monospace;font-size:9.5px;fill:var(--sage);letter-spacing:0.04em;}
+  .tooltip-panel{
+    flex:1 1 260px;min-width:240px;
+    background:var(--paper);border:1px solid var(--line);border-radius:4px;
+    padding:16px 18px;min-height:150px;
+  }
+  .tooltip-panel .tp-name{font-family:'Source Serif 4',serif;font-weight:700;font-size:1.05rem;margin-bottom:8px;}
+  .tooltip-panel .tp-body{font-size:0.88rem;color:var(--ink-soft);}
+  .exhibit-caption{
+    font-family:'IBM Plex Mono',monospace;font-size:0.72rem;color:var(--sage);
+    border-top:1px solid var(--line);margin-top:16px;padding-top:12px;
+  }
+
+  section{padding:56px 0;border-top:1px solid var(--line);}
+  section .eyebrow{margin-bottom:10px;}
+  section h2{font-size:1.7rem;margin-bottom:20px;}
+  .lede{max-width:640px;color:var(--ink-soft);}
+
+  .ledger-entry{
+    display:grid;grid-template-columns:130px 1fr;gap:20px;
+    padding:20px 0;border-bottom:1px solid var(--line);
+  }
+  .ledger-entry:last-child{border-bottom:none;}
+  .ledger-date{font-family:'IBM Plex Mono',monospace;font-size:0.78rem;color:var(--flag);padding-top:3px;}
+  .ledger-role{font-family:'Source Serif 4',serif;font-weight:600;font-size:1.08rem;}
+  .ledger-org{color:var(--sage);font-size:0.85rem;margin-top:2px;margin-bottom:10px;font-family:'IBM Plex Mono',monospace;}
+  .ledger-entry ul{margin:0;padding-left:18px;color:var(--ink-soft);font-size:0.92rem;}
+  .ledger-entry li{margin-bottom:6px;}
+
+  .proj-scope{
+    font-size:0.85rem;color:var(--sage);font-family:'IBM Plex Mono',monospace;
+    border-left:2px solid var(--flag);padding-left:12px;margin-bottom:28px;
+  }
+  .proj-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;}
+  @media (max-width:720px){.proj-grid{grid-template-columns:1fr;}}
+  .proj-card{background:var(--paper-raised);border:1px solid var(--line);border-radius:4px;padding:20px 22px;}
+  .proj-card h3{font-size:1rem;margin-bottom:14px;font-family:'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:0.05em;color:var(--ledger-deep);font-weight:600;}
+  .cost-row{display:flex;justify-content:space-between;gap:10px;margin-bottom:12px;font-size:0.85rem;padding-bottom:10px;border-bottom:1px solid var(--line);}
+  .cost-row:last-child{border-bottom:none;}
+  .cost-label{font-weight:600;flex:0 0 42%;}
+  .cost-detail{color:var(--ink-soft);flex:1;}
+  .forecast-pill{
+    display:inline-block;background:var(--ink);color:var(--paper);
+    font-family:'IBM Plex Mono',monospace;font-size:0.72rem;letter-spacing:0.05em;
+    padding:6px 12px;border-radius:12px;margin-bottom:12px;
+  }
+  .takeaways{margin-top:24px;}
+  .takeaway{display:grid;grid-template-columns:26px 1fr;gap:12px;margin-bottom:16px;}
+  .takeaway .tnum{font-family:'IBM Plex Mono',monospace;color:var(--flag);font-size:0.85rem;}
+  .takeaway .ttitle{font-weight:600;font-size:0.95rem;margin-bottom:3px;}
+  .takeaway .tdesc{font-size:0.85rem;color:var(--ink-soft);}
+  .proj-links{margin-top:22px;display:flex;gap:10px;flex-wrap:wrap;}
+  .chip{
+    font-family:'IBM Plex Mono',monospace;font-size:0.75rem;padding:6px 12px;
+    border:1px solid var(--line);border-radius:12px;color:var(--sage);
+  }
+
+  .skill-group{margin-bottom:22px;}
+  .skill-group h3{
+    font-family:'IBM Plex Mono',monospace;font-size:0.78rem;text-transform:uppercase;
+    letter-spacing:0.05em;color:var(--flag);margin-bottom:10px;font-weight:600;
+  }
+  .tags{display:flex;flex-wrap:wrap;gap:8px;}
+  .tag{
+    background:var(--paper-raised);border:1px solid var(--line);
+    padding:6px 12px;border-radius:2px;font-size:0.82rem;color:var(--ink-soft);
+  }
+
+  .certs{list-style:none;padding:0;margin:0;color:var(--ink-soft);font-size:0.9rem;}
+  .certs li{padding:8px 0;border-bottom:1px solid var(--line);}
+  .certs li:last-child{border-bottom:none;}
+
+  footer{padding:56px 0 60px;border-top:1px solid var(--line);}
+  .cta-line{
+    display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;
+  }
+  .cta-line h2{font-size:1.5rem;max-width:480px;}
+  .contact-links{display:flex;gap:14px;flex-wrap:wrap;}
+  .footnote{
+    margin-top:40px;font-family:'IBM Plex Mono',monospace;font-size:0.72rem;color:var(--sage);
+  }
+
+  @media (max-width:640px){
+    nav ul{
+      position:fixed;top:56px;left:0;right:0;background:var(--paper);
+      flex-direction:column;padding:16px 28px;border-bottom:1px solid var(--line);
+      display:none;
+    }
+    nav ul.open{display:flex;}
+    .nav-toggle{display:block;}
+    .ledger-entry{grid-template-columns:1fr;}
+    .cost-row{flex-direction:column;gap:4px;}
+    .cost-label{flex:none;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto;}
+    *{transition:none !important;}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top">Shruti Sharma</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
+    <ul id="navList">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#project">Featured Work</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <span class="eyebrow">Case File — Analyst Profile</span>
+    <h1>Shruti Sharma</h1>
+    <p class="role">Competitive Intelligence &amp; Market Research — Healthcare &amp; Life Sciences — Procurement Strategy. Building toward healthcare and life sciences consulting.</p>
+    <div class="hero-actions">
+      <a class="btn primary" href="mailto:shrutibsr97@gmail.com">Email me</a>
+      <a class="btn" href="https://linkedin.com/in/shruti-sharma-969761192" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+
+    <div class="exhibit">
+      <div class="exhibit-head">
+        <span class="exhibit-tag">EXHIBIT A</span>
+        <span class="exhibit-title">Insulin Pens — Competitive Landscape</span>
+      </div>
+      <div class="exhibit-sub">Pharmaceutical ownership vs. technology sophistication · hover a marker</div>
+      <div class="chart-row">
+        <div class="chart-svg-wrap">
+          <svg id="quadrant" viewBox="0 0 400 340" role="img" aria-label="Competitive positioning chart">
+            <rect x="40" y="10" width="340" height="280" fill="none" stroke="#D8DFDA" stroke-width="1"/>
+            <line x1="210" y1="10" x2="210" y2="290" stroke="#D8DFDA" stroke-width="1" stroke-dasharray="3,4"/>
+            <line x1="40" y1="150" x2="380" y2="150" stroke="#D8DFDA" stroke-width="1" stroke-dasharray="3,4"/>
+            <text x="40" y="304" class="axis-label">DRUG MANUFACTURER</text>
+            <text x="300" y="304" class="axis-label" text-anchor="end">DEVICE / TECH SPECIALIST</text>
+            <text x="44" y="22" class="axis-label">SMART</text>
+            <text x="44" y="284" class="axis-label">SIMPLE</text>
+
+            <g data-name="Novo Nordisk" data-note="Full-line leader — smart pens (NovoPen 6) plus CGM integrations across Dexcom, Glooko, and Abbott FreeStyle Libre.">
+              <circle class="qdot" cx="108" cy="52" r="7" fill="#0B6E7C"/>
+              <text class="qlabel" x="118" y="49">Novo Nordisk</text>
+            </g>
+            <g data-name="Eli Lilly" data-note="Lilly's own materials indicate its Tempo smart-pen platform is being wound down by end of 2026.">
+              <circle class="qdot" cx="108" cy="150" r="7" fill="#0B6E7C"/>
+              <text class="qlabel" x="118" y="154">Eli Lilly</text>
+            </g>
+            <g data-name="Sanofi" data-note="Basal-insulin stronghold via Lantus. Its connected ecosystem is partnership-led (via Abbott), not self-built.">
+              <circle class="qdot" cx="108" cy="122" r="7" fill="#0B6E7C"/>
+              <text class="qlabel" x="118" y="118">Sanofi</text>
+            </g>
+            <g data-name="Medtronic" data-note="No insulin of its own — InPen combines automated dose logging, dose calculation, and CGM-enabled functionality.">
+              <circle class="qdot" cx="330" cy="36" r="7" fill="#0B6E7C"/>
+              <text class="qlabel" x="300" y="26" text-anchor="end">Medtronic</text>
+            </g>
+            <g data-name="Owen Mumford" data-note="Aidaptus is mechanically advanced but not digitally connected — acquired by embecta in 2026, pairing its engineering with global commercial reach.">
+              <circle class="qdot" cx="346" cy="220" r="7" fill="#0B6E7C"/>
+              <text class="qlabel" x="316" y="238" text-anchor="end">Owen Mumford</text>
+            </g>
+          </svg>
+        </div>
+        <div class="tooltip-panel" id="tpPanel">
+          <div class="tp-name" id="tpName">Hover a company</div>
+          <div class="tp-body" id="tpBody">Each marker reflects the author's own scored positioning, checked against manufacturer sources — not a manufacturer-published ranking.</div>
+        </div>
+      </div>
+      <div class="exhibit-caption">Fig. 1 — Independent analyst synthesis based on cited public company/manufacturer materials. No proprietary market-share or cost data used. Owen Mumford's Aidaptus is an adjacent auto-injector benchmark, not a direct insulin-pen competitor.</div>
+    </div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap">
+    <span class="eyebrow">Summary</span>
+    <h2>About</h2>
+    <p class="lede">Business Analyst delivering competitive intelligence, market research, and procurement strategy across Healthcare, Life Sciences, IT, and Procurement — building toward healthcare and life sciences consulting. Delivered 3 should-cost models, 5 procurement category reports, and a 100+ expert network sourced for McKinsey, Bain, BCG, and Everest Group engagements. Synthesized disparate market and competitor data into actionable recommendations for clients including Roche, Thermo Fisher, and Abbott. MBA in Competitive Intelligence &amp; Strategic Management combined with a B.Tech in Biotechnology — a working blend of scientific, analytical, and strategic judgment.</p>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <span class="eyebrow">Record</span>
+    <h2>Experience</h2>
+
+    <div class="ledger-entry">
+      <div class="ledger-date mono">JAN – JUL<br>2026</div>
+      <div>
+        <div class="ledger-role">Business Analyst</div>
+        <div class="ledger-org">Claight Corporation (Expert Market Research) · Noida, IN</div>
+        <ul>
+          <li>Delivered 3 should-cost models for U.S. and Brazilian markets, giving sourcing teams data-backed negotiation leverage.</li>
+          <li>Forecasted commodity price trends using historical data and macroeconomic indicators to sharpen procurement budgeting.</li>
+          <li>Authored 5 Procurement Category Reports translating geopolitical and trade developments into executive-ready insight.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="ledger-entry">
+      <div class="ledger-date mono">SEP – NOV<br>2025</div>
+      <div>
+        <div class="ledger-role">Senior Associate — Expert Engagement</div>
+        <div class="ledger-org">Infollion Research Services Limited · Gurugram, IN</div>
+        <ul>
+          <li>Built a network of 100+ validated senior IT and healthcare experts in 3 months, sourcing CXO-level talent for McKinsey, Bain, BCG, and Everest Group due diligence.</li>
+          <li>Mapped digital transformation and healthcare ecosystems to deliver insight-driven expert recommendations.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="ledger-entry">
+      <div class="ledger-date mono">DEC 2021 –<br>DEC 2022</div>
+      <div>
+        <div class="ledger-role">Senior Research Associate</div>
+        <div class="ledger-org">INJ Partners · Noida, IN</div>
+        <ul>
+          <li>Engaged KOLs, payers, and senior industry experts from Roche, Thermo Fisher, Abbott, SD Biosensor, and Qiagen, shaping client strategy across oncology, cardiovascular, and medical device markets.</li>
+          <li>Managed 50+ respondents across Europe, Asia, and North America with 100% on-time delivery; synthesized research into Economist Intelligence Unit (EIU) reporting.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="ledger-entry">
+      <div class="ledger-date mono">MAY – JUL<br>2024</div>
+      <div>
+        <div class="ledger-role">Marketing &amp; HR Intern</div>
+        <div class="ledger-org">The Leading Solutions (Finance Consulting) · Delhi, IN</div>
+        <ul>
+          <li>Studied AI's role in fintech across 100+ customer profiles; findings improved investment prediction accuracy by 30%.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="project">
+  <div class="wrap">
+    <span class="eyebrow">Featured Work</span>
+    <h2>Insulin Pens: A Competitive Landscape</h2>
+    <p class="proj-scope">Scope: conventional and connected insulin-pen platforms across 5 companies — independent research, verified against primary/manufacturer sources.</p>
+
+    <div class="proj-grid">
+      <div class="proj-card">
+        <h3>Cost Architecture: What Changes with a Smart Pen?</h3>
+        <div class="cost-row"><div class="cost-label">Mechanical / delivery</div><div class="cost-detail">Core injection mechanism remains the main physical cost base; smart designs add complexity rather than replacing the delivery function.</div></div>
+        <div class="cost-row"><div class="cost-label">Electronics &amp; connectivity</div><div class="cost-detail">Smart pens add electronics, memory/connectivity and related components conventional pens don't require.</div></div>
+        <div class="cost-row"><div class="cost-label">Software &amp; data layer</div><div class="cost-detail">Connected products add apps, data capture, integration and ongoing software support beyond the physical pen.</div></div>
+        <div class="cost-row"><div class="cost-label">Validation &amp; lifecycle</div><div class="cost-detail">Connected systems require broader device + software validation and added support/maintenance requirements.</div></div>
+        <p style="font-size:0.82rem;color:var(--ink-soft);margin-top:14px;">The smart-pen premium is better understood as a cost architecture than a single hardware markup — electronics, software/data, and validation add layers, while reusable vs. disposable design changes the replacement economics.</p>
+      </div>
+
+      <div class="proj-card">
+        <h3>2–3 Year Outlook</h3>
+        <span class="forecast-pill">A "COEXISTENCE" MARKET, NOT A TAKEOVER</span>
+        <p style="font-size:0.88rem;color:var(--ink-soft);">Working hypothesis: smart pens expand over the next 2–3 years, but conventional pens remain the scale segment. Drivers: automated dose capture, digital diabetes management, CGM/app integration. Barriers: affordability, reimbursement, device complexity, digital-ecosystem adoption.</p>
+      </div>
+    </div>
+
+    <div class="takeaways">
+      <div class="takeaway"><div class="tnum mono">[1]</div><div><div class="ttitle">This is a coexistence market, not a takeover.</div><div class="tdesc">Conventional pens retain the accessibility and scale proposition; smart pens differentiate where connectivity and clinical utility justify added complexity.</div></div></div>
+      <div class="takeaway"><div class="tnum mono">[2]</div><div><div class="ttitle">Device innovation becomes more valuable when paired with commercial scale.</div><div class="tdesc">embecta's 2026 Owen Mumford acquisition combines device-design/manufacturing capability with global commercial infrastructure — pairing engineering with reach.</div></div></div>
+      <div class="takeaway"><div class="tnum mono">[3]</div><div><div class="ttitle">Device and software expertise can create advantage without owning the drug.</div><div class="tdesc">Medtronic's InPen combines automated dose logging, dose calculation, and CGM-enabled functionality — showing how the delivery interface itself can differentiate a diabetes platform.</div></div></div>
+      <div class="takeaway"><div class="tnum mono">[4]</div><div><div class="ttitle">Owning both drug and device is a trade-off, not a pure win.</div><div class="tdesc">Pharma ownership can strengthen control of the patient ecosystem, but external partnerships remain important for connecting insulin dosing with CGM, apps, and digital care.</div></div></div>
+    </div>
+
+    <div class="proj-links">
+      <a class="btn" href="insulin_pens_competitive_landscape.pdf" target="_blank">Download full brief (PDF)</a>
+      <span class="chip">Power BI companion dashboard — in progress</span>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <span class="eyebrow">Toolkit</span>
+    <h2>Skills</h2>
+
+    <div class="skill-group">
+      <h3>Strategy &amp; Intelligence</h3>
+      <div class="tags">
+        <span class="tag">Competitive Intelligence</span>
+        <span class="tag">Market Research</span>
+        <span class="tag">Market Intelligence</span>
+        <span class="tag">Competitive Benchmarking</span>
+        <span class="tag">Strategic Analysis</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <h3>Domain Expertise</h3>
+      <div class="tags">
+        <span class="tag">Healthcare Consulting</span>
+        <span class="tag">Life Sciences</span>
+        <span class="tag">Procurement</span>
+        <span class="tag">Cost Modeling</span>
+        <span class="tag">Forecasting</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <h3>Research &amp; Analysis</h3>
+      <div class="tags">
+        <span class="tag">Primary Research</span>
+        <span class="tag">Secondary Research</span>
+        <span class="tag">Data Analysis</span>
+        <span class="tag">Business Analysis</span>
+        <span class="tag">Executive Reporting</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <h3>Tools &amp; Other</h3>
+      <div class="tags">
+        <span class="tag">Advanced Excel</span>
+        <span class="tag">Power BI</span>
+        <span class="tag">PowerPoint</span>
+        <span class="tag">Stakeholder Management</span>
+      </div>
+    </div>
+
+    <div style="margin-top:32px;">
+      <h3 class="mono" style="font-size:0.78rem;text-transform:uppercase;letter-spacing:0.05em;color:var(--flag);margin-bottom:10px;">Education</h3>
+      <p style="font-size:0.92rem;margin:0 0 6px;"><strong>MBA, Competitive Intelligence &amp; Strategic Management</strong> — Amity University, Noida <span class="mono" style="color:var(--sage);font-size:0.8rem;">· Aug 2023 – Apr 2025 · CGPA 8.3/10</span></p>
+      <p style="font-size:0.92rem;margin:0;"><strong>B.Tech, Biotechnology</strong> — Sharda University, Greater Noida <span class="mono" style="color:var(--sage);font-size:0.8rem;">· Aug 2017 – May 2021 · CGPA 8.6/10</span></p>
+    </div>
+
+    <div style="margin-top:32px;">
+      <h3 class="mono" style="font-size:0.78rem;text-transform:uppercase;letter-spacing:0.05em;color:var(--flag);margin-bottom:10px;">Certifications</h3>
+      <ul class="certs">
+        <li>McKinsey.org Forward Program</li>
+        <li>BCG — Introduction to Strategy Consulting Job Simulation</li>
+        <li>Project Management</li>
+        <li>Microsoft Excel Advanced</li>
+        <li>Management of New Products and Services (IIT Kanpur)</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="cta-line">
+      <h2>Open to healthcare &amp; life sciences consulting roles.</h2>
+      <div class="contact-links">
+        <a class="btn primary" href="mailto:shrutibsr97@gmail.com">shrutibsr97@gmail.com</a>
+        <a class="btn" href="https://linkedin.com/in/shruti-sharma-969761192" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </div>
+    </div>
+    <div class="footnote">© 2026 Shruti Sharma. Exhibit A analysis is independent work, checked against primary/manufacturer sources — see full brief for methodology and citations.</div>
+  </div>
+</footer>
+
+<script>
+  const toggle = document.getElementById('navToggle');
+  const navList = document.getElementById('navList');
+  toggle.addEventListener('click', () => navList.classList.toggle('open'));
+  navList.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navList.classList.remove('open')));
+
+  const groups = document.querySelectorAll('#quadrant g[data-name]');
+  const tpName = document.getElementById('tpName');
+  const tpBody = document.getElementById('tpBody');
+  groups.forEach(g => {
+    const dot = g.querySelector('.qdot');
+    const show = () => {
+      groups.forEach(o => o.querySelector('.qdot').classList.remove('active'));
+      dot.classList.add('active');
+      tpName.textContent = g.dataset.name;
+      tpBody.textContent = g.dataset.note;
+    };
+    g.addEventListener('mouseenter', show);
+    g.addEventListener('focus', show);
+    g.setAttribute('tabindex', '0');
+  });
+</script>
+
+</body>
+</html>
